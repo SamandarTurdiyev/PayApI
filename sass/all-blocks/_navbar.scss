@@ -1,0 +1,181 @@
+header{
+    background: $nav-bg-color;
+    padding-bottom: 100px;
+}
+
+input[type="checkbox"]{
+    display: none
+}
+
+.navbar{
+    @include flexItem();
+     column-gap: 64px;
+      
+     @include for-nav() {
+        @include flexItem();
+        justify-content: space-between;
+     }
+     
+     &__image {
+        max-width: 134px;
+        height: 37px;
+        object-fit: cover;
+    }
+    &__menu{
+        @include flexItem();
+        justify-content: space-between;
+        width: 100%;
+
+        @include for-nav() {
+            flex-direction: column;
+            justify-content: center;
+            padding: 48px 24px 0 24px;
+            margin-top: 43px;
+            max-width: 320px;
+            background: #1B262F;
+            box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+            height: 667px;
+            transition: 0.5s ease;
+            transform: translate(700px , -300px);
+            position: fixed;
+            top: -46px;
+            right: 0;
+            margin-left: 40px;
+            z-index: 3;
+ }
+
+        &-bar{
+            @include flexItem();
+            column-gap: 40px;
+            
+            @include for-nav() {
+                flex-direction: column;
+                row-gap: 32px;
+                margin-bottom: 32px;
+            }
+            
+        }
+        &-link{
+             font-family: 'Public Sans';
+             font-weight: 700;
+             font-size: 15px;
+             line-height: 18px;
+             color: $text-color;
+        }
+    }
+    .remove__btn{
+       display: none;
+
+       @include for-nav(){
+        position: absolute;
+        right: 70px;
+        top: 52px;
+       display: block;
+       }
+    }
+    &__btn{
+        display: none;
+
+        @include for-nav(){
+            display: block;
+        }
+    
+    }
+    .menu__input:checked~.navbar__menu {
+        transform: translateX(0);
+    }
+}
+
+.hearor{
+    @include flexItem();
+    justify-content: space-between;
+    height: 800px ;
+     
+    @include for-tablet(){
+        flex-wrap: wrap-reverse;
+        margin-top: 100px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.hearor__left{
+    max-width: 546px;
+    height: 345px;
+
+
+    &-title{
+        font-family: 'DM Serif Display';
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 72px;
+        color: $text-color;
+        padding-bottom: 50px;
+
+        @include for-nav(){
+            padding-top: 50px;
+            font-weight: 400;
+font-size: 32px;
+line-height: 36px;
+text-align: center;
+color: #36536B;
+        }
+    }
+    form{
+        display: flex;
+        position: relative;
+        margin-bottom: 16px;
+
+        
+    }
+    &-input{
+         background: #FBFCFE;
+         box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+         border-radius: 24px;
+         width: 555px;
+         height: 48px;
+         padding: 16px 0 14px 32px;
+
+         @include for-nav(){
+            width: 297px;
+            
+
+         }
+         
+    }
+    &-btn{
+        position: absolute;
+        right: 0;
+        top: 0;
+
+         @include for-tablet(){
+            position: absolute;
+            right: 0;
+        }
+
+        @include for-nav(){
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &-text{
+         font-family: 'Public Sans';
+         font-weight: 400;
+         font-size: 15px;
+         line-height: 18px;
+         color: $text-color;
+         
+        
+    }
+
+}
+.hearor__right{
+    max-width: 547px;
+   
+
+    &-img{
+         max-width: 300px;
+        height: 498px;
+        margin: 0 100px;
+        
+    }
+}

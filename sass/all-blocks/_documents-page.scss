@@ -1,0 +1,88 @@
+
+.documents-page{
+    background: $nav-bg-color;
+    padding-top: 100px;
+}
+
+.documents__page{
+    @include flexItem();
+
+@include for-tablet(){
+        flex-direction: column;
+        
+        justify-content: center;
+        text-align: center;
+}
+  &-img{
+    max-width: 545px;
+  }
+}
+
+.documents__page__about{
+
+    &-title{
+        font-family: 'DM Serif Display';
+font-weight: 400;
+font-size: 48px;
+line-height: 56px;
+color: $text-color;
+    }
+    &-text{
+        font-family: 'Public Sans';
+font-weight: 400;
+font-size: 15px;
+line-height: 28px;
+color: $text-color;
+max-width: 445px;
+opacity: 0.7;
+    }
+}
+
+
+
+
+
+
+.simple__UI{
+    @include flexItem();
+    justify-content: space-between;
+
+@include for-tablet(){
+    flex-wrap: wrap-reverse;
+        margin-top: 100px;
+        justify-content: center;
+        text-align: center;
+}
+&-texts{
+    @include for-tablet(){
+        padding: 0 98px;
+    }
+    @include for-tablet(){
+        padding: 0 23px;
+    }
+}
+
+    &-title{
+        font-family: 'DM Serif Display';
+font-weight: 400;
+font-size: 48px;
+line-height: 56px;
+color: $text-color;
+    }
+
+    &-text{
+        font-family: 'Public Sans';
+max-width: 448px;
+font-weight: 400;
+font-size: 15px;
+line-height: 28px;
+color: #6C8294;
+    }
+
+    &-img{
+        width: 363px;
+height: 320px;
+object-fit: cover;
+    }
+}
+
